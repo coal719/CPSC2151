@@ -20,9 +20,9 @@ public class Receipt {
     /** 
      * Constructs a receipt object with a certain taxRate that will be applied to items.
      *
-     * @param
-     * @pre 
-     * @post 
+     * @param taxRate is the rate at which items are taxed
+     * @pre taxRate >= 0
+     * @post taxRate >= 0 AND taxableTotal >= 0 AND nontaxableTotal >= 0
      */
     public Receipt(double taxRate) {}
 
@@ -36,8 +36,7 @@ public class Receipt {
      *
      * @pre cost >= 0 AND quantity >=0 AND isTaxable = true/false
      *
-     * @post adds a value to taxable total/ nontaxable total based on whether the item is taxed or not
-     * taxableTotal >= 0 AND nonTaxableTotal >=0
+     * @post  taxableTotal >= 0 AND nonTaxableTotal >=0
      */
     public void addToReceipt(double cost, int quantity, boolean isTaxable) {}
 
@@ -46,31 +45,31 @@ public class Receipt {
      *
      * @return sum of nontaxable items
      *
-     * @pre taxRateConst should be a positive double
+     * @pre taxRateConst >= 0
      *
-     * @post applies the sum returned to nonTaxableTotal variable as a double
+     * @post nonTaxableTotal >= 0
      */
     public double getNonTaxableSubtotal() {}
 
     /**  
      * Returns the sum of all taxable items on the receipt.
      *
-     * @return 
+     * @return the sum of all taxable items on receipt
      *
-     * @pre 
+     * @pre taxRate >= 0 AND taxableTotal >= 0 AND nontaxableTotal >= 0
      *
-     * @post 
+     * @post taxableTotal >= 0
      */
     public double getTaxableSubtotal() {}
 
     /** 
      * Returns the taxRate for the receipt object.
      *
-     * @return
+     * @return the tax rate
      * 
-     * @pre 
+     * @pre taxRate >= 0 AND taxableTotal >= 0 AND nontaxableTotal >= 0
      *
-     * @post 
+     * @post taxRate >= 0
      */
     public double getTaxRate() {}
 
@@ -79,9 +78,9 @@ public class Receipt {
      *
      * @return total price
      *
-     * @pre taxRateConst, taxableTotal, and nonTaxableTotal should be positive doubles
+     * @pre taxRate >= 0 AND taxableTotal >= 0 AND nontaxableTotal >= 0
      *
-     * @post a positive double for the sum of taxableTotal and nonTaxableTotal will be given
+     * @post taxableTotal >= 0 AND nontaxableTotal >= 0
      */
     public double computeTotal() {}
 }

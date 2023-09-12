@@ -5,7 +5,7 @@
  * receipt, and returns the net receipt total according to 
  * a user-specified tax rate.
  *
- * @authors 
+ * @authors Breanna Mackey
  * @version 1.0
  *
  * @invariant taxRate >= 0 AND taxableTotal >= 0 AND nontaxableTotal >= 0
@@ -43,11 +43,11 @@ public class Receipt {
     /** 
      * Returns the sum of all non-taxable items on the receipt.
      *
-     * @return 
+     * @return sum of nontaxable items
      *
-     * @pre
+     * @pre taxRateConst should be a positive double
      *
-     * @post 
+     * @post applies the sum returned to nonTaxableTotal variable as a double
      */
     public double getNonTaxableSubtotal() {}
 
@@ -76,11 +76,11 @@ public class Receipt {
     /** 
      * Returns the total price for the receipt.
      *
-     * @return 
+     * @return total price
      *
-     * @pre 
+     * @pre taxRateConst, taxableTotal, and nonTaxableTotal should be positive doubles
      *
-     * @post 
+     * @post a positive double for the sum of taxableTotal and nonTaxableTotal will be given
      */
     public double computeTotal() {}
 }

@@ -5,7 +5,7 @@
  * receipt, and returns the net receipt total according to 
  * a user-specified tax rate.
  *
- * @authors Breanna Mackey
+ * @authors Breanna Mackey, Owen Mehle, Cole Britton
  * @version 1.0
  *
  * @invariant taxRate >= 0 AND taxableTotal >= 0 AND nontaxableTotal >= 0

@@ -30,13 +30,14 @@ public class Receipt {
      * Adds items to the receipt having a cost and quantity.
      * Can be taxable or non-taxable.
      *
-     * @param 
-     * @param 
-     * @param 
+     * @param cost the cost of the added item as a double 
+     * @param quantity number of items that are added 
+     * @param isTaxable is true or false whether the item is taxable or not
      *
-     * @pre 
+     * @pre cost >= 0 AND quantity >=0 AND isTaxable = true/false
      *
-     * @post 
+     * @post adds a value to taxable total/ nontaxable total based on whether the item is taxed or not
+     * taxableTotal >= 0 AND nonTaxableTotal >=0
      */
     public void addToReceipt(double cost, int quantity, boolean isTaxable) {}
 
